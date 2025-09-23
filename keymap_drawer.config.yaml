@@ -1,0 +1,93 @@
+# keymap_drawer.config.yaml
+# Optional configuration for customizing the keymap visualization
+
+draw_config:
+  # Layout configuration for Lily58
+  n_columns: 1  # Single column for all layers
+  draw_key_sides: true
+  key_w: 60.0
+  key_h: 56.0
+  split_gap: 30.0
+  combo_w: 28.0
+  combo_h: 26.0
+  key_rx: 6.0
+  key_ry: 6.0
+  inner_pad_w: 2.0
+  inner_pad_h: 2.0
+  outer_pad_w: 40.0
+  outer_pad_h: 56.0
+  line_spacing: 1.2
+  arc_radius: 6.0
+  append_colon_to_layer_header: true
+  small_pad: 2.0
+  
+  # Custom SVG styling
+  svg_extra_style: |
+    svg.keymap {
+      font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
+      font-size: 12px;
+      font-weight: bold;
+      text-rendering: optimizeLegibility;
+    }
+    
+    /* Color accent for held keys */
+    rect.held, rect.combo.held {
+        fill: #ffc;
+    }
+
+# Parse configuration for ZMK
+parse_config:
+  # Helps parse hold-taps and layer-taps correctly
+  zmk_combos: true
+  zmk_behaviors: true
+  
+  # Remove prefixes from parsed keys
+  zmk_remove_keycode_prefix: ["DE_", "SE_", "FR_", "ES_"]
+  
+  # Colemak users might want to map positional keys to their labels
+  # qmk_remove_keycode_prefix: []
+
+# Key substitutions for cleaner display
+key_labels:
+  # Behavior replacements
+  '&bootloader': 'BOOT'
+  '&reset': 'RESET'
+  '&trans': ''
+  '&none': ''
+  
+  # Layer keys
+  '&mo 1': 'LOWER'
+  '&mo 2': 'RAISE'  
+  '&mo 3': 'ADJUST'
+  '&mo LOWER': 'LOWER'
+  '&mo RAISE': 'RAISE'
+  '&mo ADJUST': 'ADJUST'
+  
+  # Bluetooth
+  '&bt BT_CLR': 'BT CLR'
+  '&bt BT_SEL 0': 'BT 0'
+  '&bt BT_SEL 1': 'BT 1'
+  '&bt BT_SEL 2': 'BT 2'
+  '&bt BT_SEL 3': 'BT 3'
+  '&bt BT_SEL 4': 'BT 4'
+  
+  # RGB underglow
+  '&rgb_ug RGB_TOG': 'RGB TOG'
+  '&rgb_ug RGB_HUI': 'HUE+'
+  '&rgb_ug RGB_HUD': 'HUE-'
+  '&rgb_ug RGB_SAI': 'SAT+'
+  '&rgb_ug RGB_SAD': 'SAT-'
+  '&rgb_ug RGB_BRI': 'BRI+'
+  '&rgb_ug RGB_BRD': 'BRI-'
+  '&rgb_ug RGB_EFF': 'EFFECT'
+  
+  # External power
+  '&ext_power EP_TOG': 'EXT PWR'
+  
+  # Mod-taps - show both behaviors
+  '&mt LEFT_SHIFT A': 
+    tap: 'A'
+    hold: 'SHIFT'
+  '&mt RIGHT_SHIFT O':
+    tap: 'O'
+    hold: 'SHIFT'
