@@ -1,0 +1,48 @@
+name: Draw ZMK keymaps
+
+on:
+  workflow_dispatch:  # Can be triggered manually
+  push:
+    paths:
+      - "config/*.keymap"
+      - "config/*.dtsi"
+      - "keymap_drawer.config.yaml"
+  pull_request:
+    paths:
+      - "config/*.keymap"
+      - "config/*.dtsi"
+      - "keymap_drawer.config.yaml"
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # This is necessary if the new svg should be committed
+          fetch-depth: 2
+
+      - name: Install keymap-drawer (pip install method)
+        run: python3 -m pip install keymap-drawer
+
+      - name: Draw keymaps
+        run: |
+          # Parse and draw the Lily58 keymap
+          keymap parse -c 12 -z config/lily58.keymap > lily58_keymap.yaml
+          keymap draw lily58_keymap.yaml -o lily58_keymap.svg
+
+      - name: Upload keymap artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: keymap-visualizations
+          path: |
+            lily58_keymap.yaml
+            lily58_keymap.svg
+
+      - name: Commit updated images
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[Draw] Update keymap visualizations"
+          file_pattern: "*.svg *.yaml"
+          commit_options: '--no-verify'
