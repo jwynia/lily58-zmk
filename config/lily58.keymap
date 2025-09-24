@@ -25,7 +25,7 @@
 &bootloader           &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                                               &kp N6  &kp N7    &kp N8            &kp N9               &kp N0         &bootloader
 &kp TAB               &kp Q   &kp W   &kp F     &kp P     &kp B                                                &kp J   &kp L     &kp U             &kp Y                &kp BACKSPACE  &kp MINUS
 &kp K_MUTE            &kp A   &kp R   &kp S     &kp T     &kp G                                                &kp M   &kp N     &kp E             &kp I                &kp O          &kp EQUAL
-&kp LEFT_PARENTHESIS  &kp Z   &kp X   &kp C     &kp D     &kp V   &mt COMMA COMMA         &mt COLON PERIOD     &kp K   &kp H     &kp SINGLE_QUOTE  &mt BACKSLASH SLASH  &kp PIPE       &kp RIGHT_PARENTHESIS
+&kp LEFT_PARENTHESIS  &kp Z   &kp X   &kp C     &kp D     &kp V   &mt SEMICOLON COMMA     &mt COLON PERIOD     &kp K   &kp H     &kp SINGLE_QUOTE  &mt BACKSLASH SLASH  &kp PIPE       &kp RIGHT_PARENTHESIS
                                       &kp LALT  &kp LGUI  &mo 1   &mt LEFT_SHIFT SPACE    &mt RIGHT_SHIFT RET  &mo 2   &kp BSPC  &kp RGUI
             >;
 
