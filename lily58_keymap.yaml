@@ -2,39 +2,48 @@ layout: {zmk_keyboard: lily58}
 layers:
   Default Layer:
   - ['&bootloader', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '&bootloader']
-  - [TAB, Q, W, E, R, T, Y, U, I, O, P, '-']
-  - [LCTRL, A, S, D, F, G, H, J, K, L, ;, '''']
-  - [LSHFT, Z, X, C, V, B, '[', ']', N, M, ',', .]
-  - [/, RSHFT, LALT, LGUI, Lower Layer, SPACE, RET, Raise Layer, BSPC, RGUI]
+  - [TAB, Q, W, F, P, B, J, L, U, Y, BACKSPACE, '-']
+  - [LCTRL, A, R, S, T, G, M, N, E, I, O, '=']
+  - - (
+    - Z
+    - X
+    - C
+    - D
+    - V
+    - {t: ',', h: ','}
+    - {t: ., h: ':'}
+    - K
+    - H
+    - ''''
+    - {t: /, h: \}
+  - - '|'
+    - )
+    - LALT
+    - LGUI
+    - Lower Layer
+    - {t: SPACE, h: LEFT SHIFT}
+    - {t: RET, h: RIGHT SHIFT}
+    - Raise Layer
+    - BSPC
+    - RGUI
   Lower Layer:
-  - - BT CLR
-    - {t: BT, h: '0'}
-    - {t: BT, h: '1'}
-    - {t: BT, h: '2'}
-    - {t: BT, h: '3'}
-    - {t: BT, h: '4'}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-  - [F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12]
-  - ['`', '!', '@', '#', $, '%', ^, '&', '*', (, ), '~']
+  - [ESC, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11]
+  - [SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, F12]
+  - [SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE]
   - - {t: ▽, type: trans}
-    - EP ON
-    - EP OFF
-    - EP TOG
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - '-'
-    - +
-    - '{'
-  - - '}'
-    - '|'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - SPACE
+    - SPACE
+    - SPACE
+  - - SPACE
+    - SPACE
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
@@ -100,5 +109,64 @@ layers:
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  '3':
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
