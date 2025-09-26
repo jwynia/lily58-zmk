@@ -43,11 +43,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp ESC    &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                       &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
-&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE                    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp F12
-&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE                    &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-&trans     &trans     &trans     &trans     &trans     &trans     &trans    &trans  &trans     &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-                                 &trans     &trans     &trans     &trans    &trans  &trans     &trans     &trans
+&kp ESC    &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                                           &kp F6     &kp F7     &kp F8         &kp F9        &kp F10          &kp F11
+&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp C_AC_CLOSE                                   &kp SPACE  &kp HOME   &kp PAGE_UP    &kp UP_ARROW  &kp PRINTSCREEN  &kp F12
+&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp CAPSLOCK                                     &kp SPACE  &kp END    &kp PAGE_DOWN  &kp DOWN      &kp SPACE        &kp SPACE
+&trans     &trans     &trans     &trans     &trans     &kp C_AC_CUT    &kp C_AC_COPY    &kp C_AC_PASTE  &trans     &kp SPACE  &kp LEFT       &kp RIGHT     &kp SPACE        &kp SPACE
+                                 &trans     &trans     &trans          &trans           &trans          &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
