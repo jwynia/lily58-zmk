@@ -28,20 +28,20 @@ layers:
     - RGUI
   Lower Layer:
   - [ESC, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11]
-  - [SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, F12]
-  - [SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, SPACE]
+  - [SPACE, SPACE, SPACE, SPACE, SPACE, AC CLOSE, SPACE, HOME, PAGE UP, UP ARROW, PRINTSCREEN, F12]
+  - [SPACE, SPACE, SPACE, SPACE, SPACE, CAPSLOCK, SPACE, END, PAGE DOWN, DOWN, SPACE, SPACE]
   - - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
     - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
-    - {t: ▽, type: trans}
+    - AC CUT
+    - AC COPY
+    - AC PASTE
     - {t: ▽, type: trans}
     - SPACE
-    - SPACE
-    - SPACE
+    - LEFT
+    - RIGHT
   - - SPACE
     - SPACE
     - {t: ▽, type: trans}
