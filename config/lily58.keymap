@@ -9,6 +9,26 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        cmd_shift_grave_chord: cmd_shift_grave_chord {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(GRAVE))>;
+            label = "CMD_SHIFT_GRAVE_CHORD";
+        };
+    };
+
+    behaviors {
+        cmd_shift_grave: cmd_shift_grave {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CMD_SHIFT_GRAVE";
+            bindings = <&kp GRAVE>, <&cmd_shift_grave_chord>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_LSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
